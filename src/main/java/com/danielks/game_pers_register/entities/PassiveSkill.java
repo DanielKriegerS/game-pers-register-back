@@ -1,6 +1,7 @@
 package com.danielks.game_pers_register.entities;
 
 import com.danielks.game_pers_register.entities.abrstracts.AbstractSkill;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -8,6 +9,7 @@ import jakarta.persistence.Id;
 import java.util.Objects;
 import java.util.UUID;
 
+@Entity
 public class PassiveSkill extends AbstractSkill {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

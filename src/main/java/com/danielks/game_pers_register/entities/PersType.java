@@ -1,20 +1,16 @@
 package com.danielks.game_pers_register.entities;
 
-import com.danielks.game_pers_register.entities.interfaces.Type;
+import com.danielks.game_pers_register.entities.abrstracts.AbstractType;
 import jakarta.persistence.*;
 
 import java.util.Objects;
 import java.util.UUID;
 
 @Entity
-public class PersType implements Type {
+public class PersType extends AbstractType {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-
-    private int physicalStrength;
-    private int rangedStrength;
-    private String combatStance;
 
     @OneToOne
     private ActiveSkill activeSkill;
@@ -26,36 +22,24 @@ public class PersType implements Type {
     private PassiveSkill passiveSkill;
 
     public PersType() {
+        super();
     }
 
     public PersType(UUID id, int physicalStrength, int rangedStrength, String combatStance, ActiveSkill activeSkill, MagicSkill magicSkill, PassiveSkill passiveSkill) {
-        this.id = id;
-        this.physicalStrength = physicalStrength;
-        this.rangedStrength = rangedStrength;
-        this.combatStance = combatStance;
+        super(id, physicalStrength, rangedStrength, combatStance);
         this.activeSkill = activeSkill;
         this.magicSkill = magicSkill;
         this.passiveSkill = passiveSkill;
     }
 
+    @Override
     public UUID getId() {
         return id;
     }
 
+    @Override
     public void setId(UUID id) {
         this.id = id;
-    }
-
-    public void setPhysicalStrength(int physicalStrength) {
-        this.physicalStrength = physicalStrength;
-    }
-
-    public void setRangedStrength(int rangedStrength) {
-        this.rangedStrength = rangedStrength;
-    }
-
-    public void setCombatStance(String combatStance) {
-        this.combatStance = combatStance;
     }
 
     public ActiveSkill getActiveSkill() {
@@ -93,20 +77,5 @@ public class PersType implements Type {
     @Override
     public int hashCode() {
         return Objects.hash(id);
-    }
-
-    @Override
-    public int getPhysicalStrength() {
-        return 0;
-    }
-
-    @Override
-    public int getRangedStrength() {
-        return 0;
-    }
-
-    @Override
-    public String getCombatStance() {
-        return null;
     }
 }

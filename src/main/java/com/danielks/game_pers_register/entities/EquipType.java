@@ -1,6 +1,6 @@
 package com.danielks.game_pers_register.entities;
 
-import com.danielks.game_pers_register.entities.interfaces.Type;
+import com.danielks.game_pers_register.entities.abrstracts.AbstractType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,28 +10,29 @@ import java.util.Objects;
 import java.util.UUID;
 
 @Entity
-public class EquipType implements Type {
+public class EquipType extends AbstractType {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String principalAtribute;
     private String secundaryAtribute;
-    private String combatStance;
 
     public EquipType() {
+        super();
     }
 
-    public EquipType(UUID id, String principalAtribute, String secundaryAtribute, String combatStance) {
+    public EquipType(UUID id, int physicalStrength, int rangedStrength, String principalAtribute, String secundaryAtribute, String combatStance) {
+        super(id, physicalStrength, rangedStrength, combatStance);
         this.id = id;
         this.principalAtribute = principalAtribute;
         this.secundaryAtribute = secundaryAtribute;
-        this.combatStance = combatStance;
     }
 
+    @Override
     public UUID getId() {
         return id;
     }
-
+    @Override
     public void setId(UUID id) {
         this.id = id;
     }
@@ -67,20 +68,6 @@ public class EquipType implements Type {
     @Override
     public int hashCode() {
         return Objects.hash(id);
-    }
 
-    @Override
-    public int getPhysicalStrength() {
-        return 0;
-    }
-
-    @Override
-    public int getRangedStrength() {
-        return 0;
-    }
-
-    @Override
-    public String getCombatStance() {
-        return null;
     }
 }

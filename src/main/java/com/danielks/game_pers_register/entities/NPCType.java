@@ -1,6 +1,6 @@
 package com.danielks.game_pers_register.entities;
 
-import com.danielks.game_pers_register.entities.interfaces.Type;
+import com.danielks.game_pers_register.entities.abrstracts.AbstractType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,30 +10,27 @@ import java.util.Objects;
 import java.util.UUID;
 
 @Entity
-public class NPCType implements Type {
+public class NPCType extends AbstractType {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private int physicalStrength;
-    private int rangedStrength;
-    private String combatStance;
     private int magicDefense;
 
     public NPCType() {
+        super();
     }
 
     public NPCType(UUID id, int physicalStrength, int rangedStrength, String combatStance, int magicDefense) {
-        this.id = id;
-        this.physicalStrength = physicalStrength;
-        this.rangedStrength = rangedStrength;
-        this.combatStance = combatStance;
+        super(id, physicalStrength, rangedStrength, combatStance);
         this.magicDefense = magicDefense;
     }
 
+    @Override
     public UUID getId() {
         return id;
     }
 
+    @Override
     public void setId(UUID id) {
         this.id = id;
     }

@@ -2,7 +2,7 @@ package com.danielks.game_pers_register.entities.abrstracts;
 
 import java.util.UUID;
 
-public class AbstractType {
+public abstract class AbstractType {
     protected UUID id;
     protected int physicalStrength;
     protected int rangedStrength;

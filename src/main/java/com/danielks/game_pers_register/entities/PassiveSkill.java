@@ -19,8 +19,8 @@ public class PassiveSkill extends AbstractSkill {
         super();
     }
 
-    public PassiveSkill(UUID id, String name, int value) {
-        super(id, name, value);
+    public PassiveSkill(UUID id, String name, int skillValue) {
+        super(id, name, skillValue);
     }
 
     @Override

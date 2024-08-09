@@ -14,17 +14,17 @@ public class Equipments {
     @ManyToOne
     @JoinColumn(name = "equipment_type_id")
     private EquipType type;
-    private int value;
+    private int equipmentValue;
     private int level;
 
     public Equipments() {
     }
 
-    public Equipments(UUID id, String name, EquipType type, int value, int level) {
+    public Equipments(UUID id, String name, EquipType type, int equipmentValue, int level) {
         this.id = id;
         this.name = name;
         this.type = type;
-        this.value = value;
+        this.equipmentValue = equipmentValue;
         this.level = level;
     }
 
@@ -52,12 +52,12 @@ public class Equipments {
         this.type = type;
     }
 
-    public int getValue() {
-        return value;
+    public int getEquipmentValue() {
+        return equipmentValue;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setEquipmentValue(int equipmentValue) {
+        this.equipmentValue = equipmentValue;
     }
 
     public int getLevel() {

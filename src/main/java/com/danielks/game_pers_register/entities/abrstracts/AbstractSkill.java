@@ -6,15 +6,15 @@ import java.util.UUID;
 public abstract class AbstractSkill {
     protected UUID id;
     protected String name;
-    protected int value;
+    protected int skillValue;
 
     public AbstractSkill() {
     }
 
-    public AbstractSkill(UUID id, String name, int value) {
+    public AbstractSkill(UUID id, String name, int skillValue) {
         this.id = id;
         this.name = name;
-        this.value = value;
+        this.skillValue = skillValue;
     }
 
     public UUID getId() {
@@ -33,12 +33,12 @@ public abstract class AbstractSkill {
         this.name = name;
     }
 
-    public int getValue() {
-        return value;
+    public int getSkillValue() {
+        return skillValue;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setSkillValue(int skillValue) {
+        this.skillValue = skillValue;
     }
 
     @Override

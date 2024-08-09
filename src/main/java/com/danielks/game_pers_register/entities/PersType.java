@@ -1,14 +1,15 @@
 package com.danielks.game_pers_register.entities;
 
 import com.danielks.game_pers_register.entities.interfaces.Type;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 import java.util.UUID;
 
+@Entity
 public class PersType implements Type {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     private int physicalStrength;

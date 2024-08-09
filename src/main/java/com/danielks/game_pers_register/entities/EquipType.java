@@ -1,6 +1,7 @@
 package com.danielks.game_pers_register.entities;
 
 import com.danielks.game_pers_register.entities.interfaces.Type;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -8,6 +9,7 @@ import jakarta.persistence.Id;
 import java.util.Objects;
 import java.util.UUID;
 
+@Entity
 public class EquipType implements Type {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

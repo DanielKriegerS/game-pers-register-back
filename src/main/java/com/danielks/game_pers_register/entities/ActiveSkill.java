@@ -17,7 +17,7 @@ public class ActiveSkill extends AbstractSkill {
         super();
     }
 
-    public ActiveSkill(UUID id, String name, int value, UUID id1) {
+    public ActiveSkill(UUID id, String name, int value) {
         super(id, name, value);
     }
 

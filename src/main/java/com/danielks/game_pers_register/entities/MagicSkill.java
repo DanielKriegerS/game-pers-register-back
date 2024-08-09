@@ -17,7 +17,7 @@ public class MagicSkill extends AbstractSkill {
         super();
     }
 
-    public MagicSkill(UUID id, String name, int value, UUID id1) {
+    public MagicSkill(UUID id, String name, int value) {
         super(id, name, value);
     }
 

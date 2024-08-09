@@ -14,14 +14,17 @@ public class NPCs {
     @ManyToOne
     @JoinColumn(name = "npcs_type_id")
     private NPCType type;
-
+    @ManyToOne
+    @JoinColumn(name = "game_id")
+    private Game game;
     public NPCs() {
     }
 
-    public NPCs(UUID id, int level, NPCType type) {
+    public NPCs(UUID id, int level, NPCType type, Game game) {
         this.id = id;
         this.level = level;
         this.type = type;
+        this.game = game;
     }
 
     public UUID getId() {
@@ -46,6 +49,14 @@ public class NPCs {
 
     public void setType(NPCType type) {
         this.type = type;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     @Override

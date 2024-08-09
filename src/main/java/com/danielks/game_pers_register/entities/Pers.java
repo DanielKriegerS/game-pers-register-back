@@ -26,17 +26,20 @@ public class Pers {
             inverseJoinColumns = @JoinColumn(name = "equipment_id")
     )
     private List <Equipments> equipments;
-
+    @ManyToOne
+    @JoinColumn(name = "game_id")
+    private Game game;
     public Pers() {
     }
 
-    public Pers(UUID id, String name, int level, PersType type, int charisma, List<Equipments> equipments) {
+    public Pers(UUID id, String name, int level, PersType type, int charisma, List<Equipments> equipments, Game game) {
         this.id = id;
         this.name = name;
         this.level = level;
         this.type = type;
         this.charisma = charisma;
         this.equipments = equipments;
+        this.game = game;
     }
 
     public UUID getId() {
@@ -85,6 +88,14 @@ public class Pers {
 
     public void setEquipments(List<Equipments> equipments) {
         this.equipments = equipments;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     @Override

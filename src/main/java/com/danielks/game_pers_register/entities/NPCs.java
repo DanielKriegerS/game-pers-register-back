@@ -1,6 +1,5 @@
-package com.danielks.game_pers_register;
+package com.danielks.game_pers_register.entities;
 
-import com.danielks.game_pers_register.entities.NPCType;
 import jakarta.persistence.*;
 
 import java.util.Objects;

@@ -16,6 +16,6 @@ public record GameDTO(
         @NotNull List<Pers> pers,
         @NotNull List<NPCs> npcs,
         boolean ended,
-        String resul
+        String result
         ) {
 }

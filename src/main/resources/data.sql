@@ -40,3 +40,50 @@ INSERT INTO passive_skill (id, name, skill_value) VALUES
 -- magical long-distance skill
 INSERT INTO magic_skill (id, name, skill_value) VALUES
 ('f7c20e8a-b4f4-4df1-888e-0c2d2a1f9fd6', 'Grenade Attack', 5);
+
+-- TYPES SECTION
+-- character types
+
+-- wizard type
+INSERT INTO pers_type (id, physical_strength, ranged_strength, combat_stance, active_skill_id, passive_skill_id, magic_skill_id) VALUES
+('1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d', 4, 6, 'wizard', 'f47ac10b-58cc-4372-a567-0e02b2c3d479', 'dce0f0d8-8f54-4d8a-bbe2-7c35a8ea2b3e', 'a43e45b4-9a1b-4efc-b6d7-5c2b9e64f61a');
+
+-- warrior type
+INSERT INTO pers_type (id, physical_strength, ranged_strength, combat_stance, active_skill_id, passive_skill_id, magic_skill_id) VALUES
+('2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e', 7, 2, 'warrior', 'e16b18a7-f3b4-462e-b77f-d799e1e8b8e7', '7d16d26b-5d2b-42b8-91f0-3b45a68cbb6b', 'b9a7641e-070d-4bfc-b6a2-98b44c2d78e6');
+
+-- long-distance type
+INSERT INTO pers_type (id, physical_strength, ranged_strength, combat_stance, active_skill_id, passive_skill_id, magic_skill_id) VALUES
+('3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f', 5, 7, 'long-distance', '24bdf5d4-6b67-47af-8732-03b29f3b4cf3', 'cc5b6b1c-8d72-4aef-9a23-3b26ef21b11e', 'f7c20e8a-b4f4-4df1-888e-0c2d2a1f9fd6');
+
+-- equipment types
+
+-- wizard type
+INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
+('f1e2d3c4-b5a6-7890-1234-56789abcdef0', 10, 10, 'magic_skill', 'active_skill', 2,'wizard');
+
+-- warrior type
+INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
+('c9d8e7f6-a5b4-3210-9876-54321fedcba0', 10, 10, 'physical_strength', 'active_skill', 2, 'warrior');
+
+-- long-distance type
+INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
+('e4d3c2b1-a5f6-7890-1e2d-3c4b5a6f7e8d', 10, 10, 'ranged_strength', 'active_skill', 2, 'long-distance');
+
+-- npcs types
+
+-- goblin type 1
+INSERT INTO npctype (id, physical_strength, ranged_strength, combat_stance, lv, magic_defense) VALUES
+('a2b3c4d5-e6f7-8901-2345-6789abcdef12', 30, 20, 'hand-to-hand', 1, 15);
+
+-- goblin type 2
+INSERT INTO npctype (id, physical_strength, ranged_strength, combat_stance, lv, magic_defense) VALUES
+('d7e6f5a4-b3c2-1098-7654-3210fedcba98', 40, 30, 'hand-to-hand', 2, 20);
+
+-- goblin type 3
+INSERT INTO npctype (id, physical_strength, ranged_strength, combat_stance, lv, magic_defense) VALUES
+('f8e9d0c1-b2a3-4567-8901-23456fedcba9', 55, 40, 'hand-to-hand', 3, 25);
+
+-- boss type 1
+INSERT INTO npctype (id, physical_strength, ranged_strength, combat_stance, lv, magic_defense) VALUES
+('b0c1d2e3-f4a5-6789-0123-456789abcdef', 100, 65, 'long-distance', 1, 50);

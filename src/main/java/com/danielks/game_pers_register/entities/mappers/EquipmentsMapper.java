@@ -15,13 +15,11 @@ public interface EquipmentsMapper
     @Mapping(source = "name", target = "name")
     @Mapping(source = "type", target = "equipType")
     @Mapping(source = "equipmentValue", target = "equipmentValue")
-    @Mapping(source = "level", target = "level")
     EquipmentsDTO toDto(Equipments equipments);
 
     @Mapping(source = "id", target = "id")
     @Mapping(source = "name", target = "name")
     @Mapping(source = "equipType", target = "type")
     @Mapping(source = "equipmentValue", target = "equipmentValue")
-    @Mapping(source = "level", target = "level")
     Equipments toEntity(EquipmentsDTO equipmentsDTO);
 }

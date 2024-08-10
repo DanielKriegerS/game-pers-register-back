@@ -16,14 +16,16 @@ public class EquipType extends AbstractType {
     private UUID id;
     private String principalAtribute;
     private String secundaryAtribute;
+    private int lv;
 
     public EquipType() {
         super();
     }
 
-    public EquipType(UUID id, int physicalStrength, int rangedStrength, String principalAtribute, String secundaryAtribute, String combatStance) {
+    public EquipType(UUID id, int physicalStrength, int rangedStrength, String principalAtribute, String secundaryAtribute, int lv, String combatStance) {
         super(id, physicalStrength, rangedStrength, combatStance);
         this.id = id;
+        this.lv = lv;
         this.principalAtribute = principalAtribute;
         this.secundaryAtribute = secundaryAtribute;
     }
@@ -51,6 +53,14 @@ public class EquipType extends AbstractType {
 
     public void setSecundaryAtribute(String secundaryAtribute) {
         this.secundaryAtribute = secundaryAtribute;
+    }
+
+    public int getLv() {
+        return lv;
+    }
+
+    public void setLv(int lv) {
+        this.lv = lv;
     }
 
     public void setCombatStance(String combatStance) {

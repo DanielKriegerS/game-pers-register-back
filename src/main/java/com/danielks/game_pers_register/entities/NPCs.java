@@ -10,7 +10,6 @@ public class NPCs {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private int level;
     @ManyToOne
     @JoinColumn(name = "npcs_type_id")
     private NPCType type;
@@ -20,9 +19,8 @@ public class NPCs {
     public NPCs() {
     }
 
-    public NPCs(UUID id, int level, NPCType type, Game game) {
+    public NPCs(UUID id, NPCType type, Game game) {
         this.id = id;
-        this.level = level;
         this.type = type;
         this.game = game;
     }
@@ -33,14 +31,6 @@ public class NPCs {
 
     public void setId(UUID id) {
         this.id = id;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
     }
 
     public NPCType getType() {

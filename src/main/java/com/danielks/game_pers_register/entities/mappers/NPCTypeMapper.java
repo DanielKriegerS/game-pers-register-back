@@ -15,6 +15,7 @@ public interface NPCTypeMapper {
     @Mapping(source = "rangedStrength", target = "rangedStrength")
     @Mapping(source = "combatStance", target = "combatStance")
     @Mapping(source = "magicDefense", target = "magicDefense")
+    @Mapping(source = "lv", target = "lv")
     NPCTypeDTO toDto(NPCType npcType);
 
     @Mapping(source = "id", target = "id")
@@ -22,5 +23,6 @@ public interface NPCTypeMapper {
     @Mapping(source = "rangedStrength", target = "rangedStrength")
     @Mapping(source = "combatStance", target = "combatStance")
     @Mapping(source = "magicDefense", target = "magicDefense")
+    @Mapping(source = "lv", target = "lv")
     NPCType toEntity(NPCTypeDTO npcTypeDTO);
 }

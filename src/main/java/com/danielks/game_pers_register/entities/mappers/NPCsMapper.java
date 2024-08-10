@@ -11,13 +11,11 @@ public interface NPCsMapper {
     NPCsMapper INSTANCE = Mappers.getMapper(NPCsMapper.class);
 
     @Mapping(source = "id", target = "id")
-    @Mapping(source = "level", target = "level")
     @Mapping(source = "type", target = "npcType")
     @Mapping(source = "game", target = "game")
     NPCsDTO toDto(NPCs npcs);
 
     @Mapping(source = "id", target = "id")
-    @Mapping(source = "level", target = "level")
     @Mapping(source = "npcType", target = "type")
     @Mapping(source = "game", target = "game")
     NPCs toEntity(NPCsDTO npcsDTO);

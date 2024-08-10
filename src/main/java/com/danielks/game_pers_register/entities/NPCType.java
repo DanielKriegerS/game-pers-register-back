@@ -15,13 +15,15 @@ public class NPCType extends AbstractType {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private int magicDefense;
+    private int lv;
 
     public NPCType() {
         super();
     }
 
-    public NPCType(UUID id, int physicalStrength, int rangedStrength, String combatStance, int magicDefense) {
+    public NPCType(UUID id, int physicalStrength, int rangedStrength, String combatStance, int lv, int magicDefense) {
         super(id, physicalStrength, rangedStrength, combatStance);
+        this.lv = lv;
         this.magicDefense = magicDefense;
     }
 
@@ -45,6 +47,14 @@ public class NPCType extends AbstractType {
 
     public void setCombatStance(String combatStance) {
         this.combatStance = combatStance;
+    }
+
+    public int getLv() {
+        return lv;
+    }
+
+    public void setLv(int lv) {
+        this.lv = lv;
     }
 
     public int getMagicDefense() {

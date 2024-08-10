@@ -15,6 +15,7 @@ public interface EquipTypeMapper {
     @Mapping(source = "secundaryAtribute", target = "secundaryAtribute")
     @Mapping(source = "physicalStrength", target = "physicalStrength")
     @Mapping(source = "rangedStrength", target = "rangedStrength")
+    @Mapping(source = "lv", target = "lv")
     @Mapping(source = "combatStance", target = "combatStance")
     EquipTypeDTO toDto(EquipType equipType);
 
@@ -23,6 +24,7 @@ public interface EquipTypeMapper {
     @Mapping(source = "secundaryAtribute", target = "secundaryAtribute")
     @Mapping(source = "physicalStrength", target = "physicalStrength")
     @Mapping(source = "rangedStrength", target = "rangedStrength")
+    @Mapping(source = "lv", target = "lv")
     @Mapping(source = "combatStance", target = "combatStance")
     EquipType toEntity(EquipTypeDTO equipTypeDTO);
 }

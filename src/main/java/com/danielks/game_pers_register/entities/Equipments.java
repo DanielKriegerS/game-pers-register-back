@@ -15,17 +15,15 @@ public class Equipments {
     @JoinColumn(name = "equipment_type_id")
     private EquipType type;
     private int equipmentValue;
-    private int level;
 
     public Equipments() {
     }
 
-    public Equipments(UUID id, String name, EquipType type, int equipmentValue, int level) {
+    public Equipments(UUID id, String name, EquipType type, int equipmentValue) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.equipmentValue = equipmentValue;
-        this.level = level;
     }
 
     public UUID getId() {
@@ -58,14 +56,6 @@ public class Equipments {
 
     public void setEquipmentValue(int equipmentValue) {
         this.equipmentValue = equipmentValue;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
     }
 
     @Override

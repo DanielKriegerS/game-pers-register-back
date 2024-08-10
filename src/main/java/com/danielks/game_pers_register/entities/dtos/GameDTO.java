@@ -1,4 +1,4 @@
-package com.danielks.game_pers_register.entities.DTOs;
+package com.danielks.game_pers_register.entities.dtos;
 
 import com.danielks.game_pers_register.entities.NPCs;
 import com.danielks.game_pers_register.entities.Pers;

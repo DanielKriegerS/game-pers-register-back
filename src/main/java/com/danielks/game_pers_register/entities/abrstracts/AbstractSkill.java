@@ -1,9 +1,14 @@
 package com.danielks.game_pers_register.entities.abrstracts;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+
 import java.util.Objects;
 import java.util.UUID;
 
+@MappedSuperclass
 public abstract class AbstractSkill {
+    @Id
     protected UUID id;
     protected String name;
     protected int skillValue;

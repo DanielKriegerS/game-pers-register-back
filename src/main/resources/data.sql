@@ -56,17 +56,29 @@ INSERT INTO pers_type (id, physical_strength, ranged_strength, combat_stance, ac
 INSERT INTO pers_type (id, physical_strength, ranged_strength, combat_stance, active_skill_id, passive_skill_id, magic_skill_id) VALUES
 ('3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f', 5, 7, 'long-distance', '24bdf5d4-6b67-47af-8732-03b29f3b4cf3', 'cc5b6b1c-8d72-4aef-9a23-3b26ef21b11e', 'f7c20e8a-b4f4-4df1-888e-0c2d2a1f9fd6');
 
--- equipment types
+-- equipments types
 
--- wizard type
+-- wizard type 1
+INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
+('c3b4a5d6-e7f8-9012-3456-7890abcdef23', 0, 0, 'magic_skill', 'active_skill', 1,'wizard');
+
+-- wizard type 2
 INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
 ('f1e2d3c4-b5a6-7890-1234-56789abcdef0', 10, 10, 'magic_skill', 'active_skill', 2,'wizard');
 
--- warrior type
+-- warrior type 1
+INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
+('f2e3d4c5-b6a7-8901-2345-6789abcdef45', 0, 0, 'magic_skill', 'active_skill', 1,'warrior');
+
+-- warrior type 2
 INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
 ('c9d8e7f6-a5b4-3210-9876-54321fedcba0', 10, 10, 'physical_strength', 'active_skill', 2, 'warrior');
 
--- long-distance type
+-- long-distance type 1
+INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
+('a9b8c7d6-e5f4-3210-9876-54321fedcba7', 0, 0, 'magic_skill', 'active_skill', 1,'long-distance');
+
+-- long-distance type 2
 INSERT INTO equip_type (id, physical_strength, ranged_strength, principal_atribute, secundary_atribute, lv, combat_stance) VALUES
 ('e4d3c2b1-a5f6-7890-1e2d-3c4b5a6f7e8d', 10, 10, 'ranged_strength', 'active_skill', 2, 'long-distance');
 
@@ -87,3 +99,18 @@ INSERT INTO npctype (id, physical_strength, ranged_strength, combat_stance, lv, 
 -- boss type 1
 INSERT INTO npctype (id, physical_strength, ranged_strength, combat_stance, lv, magic_defense) VALUES
 ('b0c1d2e3-f4a5-6789-0123-456789abcdef', 100, 65, 'long-distance', 1, 50);
+--
+
+-- EQUIPMENTS SECTION
+--
+-- warrior equipment basic
+INSERT INTO equipments (id, name, equipment_type_id, equipment_value) VALUES
+('d6e7f8a9-b0c1-2345-6789-01234abcdef5', 'Espada I', 'f2e3d4c5-b6a7-8901-2345-6789abcdef45', 10);
+
+-- wizard equipment basic
+INSERT INTO equipments (id, name, equipment_type_id, equipment_value) VALUES
+('b7a8c9d0-e1f2-3456-7890-12345fedcba8', 'Cajado I', 'c3b4a5d6-e7f8-9012-3456-7890abcdef23', 10);
+
+-- long-distance equipment basic
+INSERT INTO equipments (id, name, equipment_type_id, equipment_value) VALUES
+('f3e4d5c6-b7a8-9012-3456-7890abcdef67', 'Arco-e-flecha I', 'a9b8c7d6-e5f4-3210-9876-54321fedcba7', 10);

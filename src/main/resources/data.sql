@@ -114,3 +114,21 @@ INSERT INTO equipments (id, name, equipment_type_id, equipment_value) VALUES
 -- long-distance equipment basic
 INSERT INTO equipments (id, name, equipment_type_id, equipment_value) VALUES
 ('f3e4d5c6-b7a8-9012-3456-7890abcdef67', 'Arco-e-flecha I', 'a9b8c7d6-e5f4-3210-9876-54321fedcba7', 10);
+
+-- NPCs SECTION
+--
+-- goblin 1
+INSERT INTO npcs (id, npcs_type_id) VALUES
+('e8f9a0b1-c2d3-4567-8901-23456fedcba9', 'a2b3c4d5-e6f7-8901-2345-6789abcdef12');
+
+-- goblin 2
+INSERT INTO npcs (id, npcs_type_id) VALUES
+('b1c2d3e4-f5a6-7890-1234-56789abcdef0', 'd7e6f5a4-b3c2-1098-7654-3210fedcba98');
+
+-- goblin 3
+INSERT INTO npcs (id, npcs_type_id) VALUES
+('d9e8f7a6-b5c4-3210-9876-54321fedcba7', 'f8e9d0c1-b2a3-4567-8901-23456fedcba9');
+
+-- boss 1
+INSERT INTO npcs (id, npcs_type_id) VALUES
+('f0e1d2c3-b4a5-6789-0123-456789abcdef', 'b0c1d2e3-f4a5-6789-0123-456789abcdef');

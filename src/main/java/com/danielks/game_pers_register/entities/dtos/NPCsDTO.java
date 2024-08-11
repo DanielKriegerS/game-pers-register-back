@@ -9,7 +9,6 @@ import java.util.UUID;
 
 public record NPCsDTO(
         UUID id,
-        @NotEmpty(message = "nível do NPC não informado") int level,
         @NotNull NPCType npcType,
         @NotNull Game game
 

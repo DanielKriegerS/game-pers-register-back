@@ -9,6 +9,7 @@ public record NPCTypeDTO(
     @NotEmpty(message = "força física não informada") int physicalStrength,
     @NotEmpty(message = "força a distância não informada") int rangedStrength,
     @NotEmpty(message = "estilo de combate não informado") String combatStance,
+    @NotEmpty(message = "level não informado") int lv,
     @NotEmpty(message = "defesa mágica não informada") int magicDefense
 ) {
 }

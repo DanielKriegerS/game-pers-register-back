@@ -10,6 +10,7 @@ public record EquipTypeDTO(
     @NotEmpty(message = "força a distância não informada") int rangedStrength,
     @NotEmpty(message = "estilo de combate não informado") String combatStance,
     @NotEmpty(message = "atributo primário não informado") String principalAtribute,
+    @NotEmpty(message = "level não informado") int lv,
     @NotEmpty(message = "atributo secundário não informado") String secundaryAtribute
 ) {
 }

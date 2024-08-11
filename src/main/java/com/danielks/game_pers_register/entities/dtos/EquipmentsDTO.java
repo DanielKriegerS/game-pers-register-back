@@ -9,7 +9,6 @@ public record EquipmentsDTO(
     UUID id,
     @NotEmpty(message = "Nome do equipamento não informado") String name,
     EquipType equipType,
-    @NotEmpty(message = "Valor do equipamento não informado") int equipmentValue,
-    @NotEmpty(message = "Nível do equipamento não informado") int level
+    @NotEmpty(message = "Valor do equipamento não informado") int equipmentValue
 ) {
 }

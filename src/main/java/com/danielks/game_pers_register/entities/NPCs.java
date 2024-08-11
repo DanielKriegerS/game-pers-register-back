@@ -19,6 +19,11 @@ public class NPCs {
     public NPCs() {
     }
 
+    public NPCs(UUID id, NPCType type) {
+        this.id = id;
+        this.type = type;
+    }
+
     public NPCs(UUID id, NPCType type, Game game) {
         this.id = id;
         this.type = type;

@@ -32,6 +32,15 @@ public class Pers {
     public Pers() {
     }
 
+    public Pers(UUID id, String name, int level, PersType type, int charisma, List<Equipments> equipments) {
+        this.id = id;
+        this.name = name;
+        this.level = level;
+        this.type = type;
+        this.charisma = charisma;
+        this.equipments = equipments;
+    }
+
     public Pers(UUID id, String name, int level, PersType type, int charisma, List<Equipments> equipments, Game game) {
         this.id = id;
         this.name = name;
